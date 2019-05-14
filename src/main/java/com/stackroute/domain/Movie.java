@@ -7,14 +7,14 @@ public class Movie
 {
     private String movieName;
     private String director;
-    private Actor actor1;
+    private Actor actor;
 
     public Movie() { }
     @Autowired
     public Movie(String movieName, String director, Actor actor1) {
         this.movieName = movieName;
         this.director = director;
-        this.actor1 = actor1;
+        this.actor = actor1;
     }
 
     @Override
@@ -22,7 +22,7 @@ public class Movie
         return "Movie{" +
                 "movieName='" + movieName + '\'' +
                 ", director='" + director + '\'' +
-                ", actor=" + actor1 +
+                ", actor=" + actor +
                 '}';
     }
 
@@ -42,11 +42,11 @@ public class Movie
         this.director = director;
     }
 
-    public Actor getActor1() {
-        return actor1;
+    public Actor getActor() {
+        return actor;
     }
 
-    public void setActor1(Actor actor) {
-        this.actor1 = actor;
+    public void setActor(Actor actor) {
+        this.actor = actor;
     }
 }
