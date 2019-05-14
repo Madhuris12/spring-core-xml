@@ -13,6 +13,7 @@ private String name;
         this.gender = gender;
     }
 
+
     public String getGender() {
         return gender;
     }
