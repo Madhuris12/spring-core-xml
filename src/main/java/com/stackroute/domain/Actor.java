@@ -1,8 +1,12 @@
 package com.stackroute.domain;
 
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.BeanFactoryAware;
+import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class Actor
+public class Actor implements BeanNameAware, BeanFactoryAware
 {
 
 private String name;
@@ -53,5 +57,15 @@ private String name;
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public void setBeanName(String s) {
+        System.out.println("in BeanNameAware "+s);
+    }
+
+    @Override
+    public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
+        System.out.println("In BeanFactoryAware "+beanFactory );
     }
 }
