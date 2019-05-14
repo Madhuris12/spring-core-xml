@@ -13,11 +13,11 @@
         <property name="director" value="REMO"></property>
     </bean>
 
-    <bean id="Actor" class="com.stackroute.domain.Actor">
-        <property name="name" value="aart"></property>
-        <property name="age" value="26"></property>
-        <property name="gender" value="male"></property>
-    </bean>
+<!--    <bean id="Actor" class="com.stackroute.domain.Actor">-->
+<!--        <property name="name" value="aart"></property>-->
+<!--        <property name="age" value="26"></property>-->
+<!--        <property name="gender" value="male"></property>-->
+<!--    </bean>-->
 
     <bean id="movie5" autowire="byName" class="com.stackroute.domain.Movie">
         <property name="movieName" value="ABCD"></property>
@@ -40,6 +40,10 @@
 <!--        <constructor-arg index="1" value="30"></constructor-arg>-->
 <!--        <constructor-arg index="2" value="Male"></constructor-arg>-->
 <!--    </bean>-->
+<bean id="lifecycledemo" class="com.stackroute.domain.LifeCycleDemo" init-method="customInit" destroy-method="customDestroy">
 
+</bean>
+
+    <bean id="postprocessor" class="com.stackroute.domain.PostProcessorDemo"></bean>
 
 </beans>
