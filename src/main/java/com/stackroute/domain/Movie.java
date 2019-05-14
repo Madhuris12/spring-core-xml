@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class Movie
 {
+
     private String movieName;
     private String director;
     private Actor actor;
